@@ -7,13 +7,10 @@
        
             <input id="n1" type="number"></input>
             <input id="n2" type="number"></input>
-            <select>
-                <option>+</option>
-                <option>-</option>
-                <option>/</option>
-                <option>*</option>
-            </select>
-            <button onclick="math()" type="submit">Submit</button>
+
+            <button onclick="sum()" >+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="multi()">*</button>
 
        
         <div id="result"></div>
@@ -22,11 +19,26 @@
         <script>
             var n1 = parseInt(document.getElementById("n1").value);
             var n2 = parseInt(document.getElementById("n2").value);
-          function math()
+            var type = document.getElementById("type");
+          function sum()
           {
             var result = n1+n2;
-            alert(result);
+            document.getElementById("result").innerHTML = result;
+          /*      var result = n1+n2;
+                  document.getElementById("result").innerHTML = result; */
+            
+            
+        
           };
+          function sub() {
+            var result = n1-n2;
+            document.getElementById("result").innerHTML = result
+
+          }
+          function multi() {
+            var result = n1*n2;
+            document.getElementById("result").innerHTML = result
+          }
 
 
         </script>
